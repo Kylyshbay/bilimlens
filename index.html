@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BilimLens — аналитика учебников и учебных часов</title>
+  <meta name="description" content="BilimLens — платформа для методистов: анализ результатов тестирования по темам, сложные разделы, сравнение учебников с поправкой на входной уровень, рекомендации по учебным часам.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B5563'/%3E%3Ccircle cx='14' cy='14' r='8' fill='none' stroke='white' stroke-width='2.6'/%3E%3Crect x='10.5' y='14' width='2.4' height='4' fill='%23E39B2D'/%3E%3Crect x='14' y='11' width='2.4' height='7' fill='white'/%3E%3Cpath d='M20 20 26 26' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#view">К содержанию</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#home" aria-label="BilimLens">
+        <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2.6"/><rect x="8.5" y="14" width="3" height="5" rx="1" fill="#E39B2D"/><rect x="12.5" y="10" width="3" height="9" rx="1" fill="currentColor"/><rect x="16.5" y="12" width="3" height="7" rx="1" fill="currentColor" opacity=".6"/><path d="M22.5 22.5 29 29" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        <span class="brand-text"><b>BilimLens</b><small id="brand-tag"></small></span>
+      </a>
+      <nav id="nav" class="nav" aria-label="Разделы"></nav>
+      <div id="lang" class="lang" role="group" aria-label="Язык / Тіл"></div>
+    </div>
+  </header>
+  <div id="demo-banner" class="demo-banner"></div>
+  <div id="filters" class="filters" hidden></div>
+  <main id="view" class="view" tabindex="-1">
+    <noscript>Для работы BilimLens включите JavaScript.</noscript>
+  </main>
+  <footer id="footer" class="footer"></footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/analytics.js"></script>
+  <script src="assets/data/demo.js"></script>
+  <script src="assets/vendor/xlsx.mini.min.js" defer></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BilimLens — презентация</title><style>@font-face{font-family:Inter;font-weight:400;src:url(../assets/fonts/inter-cyrillic-ext-400-normal.woff2) format('woff2');unicode-range:U+0460-052F}
+@font-face{font-family:Inter;font-weight:400;src:url(../assets/fonts/inter-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Inter;font-weight:400;src:url(../assets/fonts/inter-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+2212}
+@font-face{font-family:Inter;font-weight:500;src:url(../assets/fonts/inter-cyrillic-ext-500-normal.woff2) format('woff2');unicode-range:U+0460-052F}
+@font-face{font-family:Inter;font-weight:500;src:url(../assets/fonts/inter-cyrillic-500-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Inter;font-weight:500;src:url(../assets/fonts/inter-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+2212}
+@font-face{font-family:Inter;font-weight:600;src:url(../assets/fonts/inter-cyrillic-ext-600-normal.woff2) format('woff2');unicode-range:U+0460-052F}
+@font-face{font-family:Inter;font-weight:600;src:url(../assets/fonts/inter-cyrillic-600-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Inter;font-weight:600;src:url(../assets/fonts/inter-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+2212}
+@font-face{font-family:Inter;font-weight:700;src:url(../assets/fonts/inter-cyrillic-ext-700-normal.woff2) format('woff2');unicode-range:U+0460-052F}
+@font-face{font-family:Inter;font-weight:700;src:url(../assets/fonts/inter-cyrillic-700-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Inter;font-weight:700;src:url(../assets/fonts/inter-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+2212}
+@font-face{font-family:Inter;font-weight:800;src:url(../assets/fonts/inter-cyrillic-ext-800-normal.woff2) format('woff2');unicode-range:U+0460-052F}
+@font-face{font-family:Inter;font-weight:800;src:url(../assets/fonts/inter-cyrillic-800-normal.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Inter;font-weight:800;src:url(../assets/fonts/inter-latin-800-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+2000-206F,U+2212}
+:root{--ink:#12303A;--text:#24414B;--muted:#63777F;--line:#DCE5E8;--bg:#F3F6F7;--primary:#0B5563;--teal:#14A3A3;--amber:#E39B2D;--crit:#C2412D;--ok:#2E9B6A}
+*{box-sizing:border-box}html,body{margin:0;background:#0C2C33;font-family:Inter,system-ui,sans-serif;color:var(--text)}
+.deck{width:1920px;height:1080px;position:absolute;left:50%;top:50%;transform-origin:center}
+.slide{position:absolute;inset:0;width:1920px;height:1080px;background:var(--bg);padding:80px 110px 100px;display:none;flex-direction:column;overflow:hidden}
+.slide.active{display:flex}
+h1,h2,h3{color:var(--ink);margin:0;letter-spacing:-.02em}
+.sh{display:flex;gap:28px;align-items:flex-start;margin-bottom:46px}.sn{font-size:22px;font-weight:800;color:var(--amber);padding-top:14px}
+.sh h2{font-size:60px;font-weight:800;line-height:1.08}.kz{color:var(--muted);font-size:24px;margin:8px 0 0}.kz.big{font-size:28px}
+.sf{position:absolute;left:110px;right:110px;bottom:34px;display:flex;justify-content:space-between;font-size:18px;color:var(--muted)}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px 38px}.card h3{font-size:30px;margin-bottom:14px}.card p,.card li{font-size:24px;line-height:1.45}
+.card ul,.card ol{margin:0 0 24px;padding-left:28px;display:flex;flex-direction:column;gap:10px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:34px}.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}.cols2x2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.title{flex-direction:row!important;gap:60px;align-items:center;background:linear-gradient(120deg,#fff 0%,#EAF4F4 60%,#D7ECEB 100%)}
+.t-left{flex:1.05}.t-right{flex:1}.t-right img{width:100%;border-radius:18px;box-shadow:0 30px 80px rgba(11,85,99,.25);border:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:16px;color:var(--primary);font-size:46px;font-weight:800;letter-spacing:-.03em;margin-bottom:40px}
+.title h1{font-size:68px;line-height:1.07;font-weight:800;margin-bottom:22px}.case{font-size:22px;color:var(--primary);font-weight:600;margin:34px 0 0}
+.team{margin-top:46px;font-size:26px;color:var(--ink);background:#fff;border:1px dashed #9FB7BE;border-radius:14px;padding:16px 22px;display:inline-block}.team span{color:var(--muted);margin-right:8px}
+.pc{background:#fff;border:1px solid var(--line);border-top:6px solid var(--crit);border-radius:20px;padding:38px}.pi{font-size:44px;margin-bottom:12px;color:var(--crit);font-weight:800}.pc h3{font-size:34px;margin-bottom:14px}.pc p{font-size:25px;line-height:1.45;margin:0}
+.quote{margin-top:44px;font-size:34px;font-weight:600;color:var(--primary);border-left:8px solid var(--amber);padding:6px 0 6px 30px;line-height:1.3}
+.tl{counter-reset:s;list-style:none;padding:0!important}.tl li{position:relative;padding-left:56px}.tl li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:700;font-size:20px}
+.lead{font-size:36px;line-height:1.35;color:var(--ink);font-weight:500;margin:0 0 46px;max-width:1500px}
+.fc{background:#fff;border:1px solid var(--line);border-radius:20px;padding:32px}.fc span{color:var(--amber);font-weight:800;font-size:22px}.fc h3{font-size:30px;margin:10px 0 12px}.fc p{font-size:22px;line-height:1.45;margin:0}
+.note{margin-top:auto;font-size:22px;color:var(--muted);background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 24px}
+.demo-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:48px;flex:1;min-height:0}
+.shot{min-height:0;overflow:hidden;border-radius:18px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(11,85,99,.15);background:#fff}.shot img{width:100%;display:block}
+.side p{font-size:25px;line-height:1.4;margin:0 0 18px}.side ul{font-size:24px;line-height:1.5;padding-left:26px;margin:0 0 22px}
+.big-num{font-size:110px;font-weight:800;color:var(--crit);letter-spacing:-.04em;line-height:1}
+.callout{background:#FFF6EA;border:1px solid #F3D5A6;border-radius:14px;padding:18px 22px;font-size:22px;line-height:1.4;margin-bottom:18px}
+.rule{font-size:19px!important;color:var(--muted)}.small{font-size:19px!important;color:var(--muted);line-height:1.45}
+.par-grid{display:grid;grid-template-columns:1fr 220px 1fr;gap:30px;align-items:center}
+.par-col{background:#fff;border-radius:22px;padding:34px 38px;border:1px solid var(--line)}.par-col.adj{border:3px solid var(--teal)}
+.lbl{font-size:24px;font-weight:700;color:var(--ink);margin:0 0 24px}
+.pbar{display:grid;grid-template-columns:170px 1fr 90px;gap:16px;align-items:center;margin-bottom:18px;font-size:24px}.pbar div{height:30px;background:#EAF0F2;border-radius:8px;overflow:hidden}.pbar i{display:block;height:100%;border-radius:8px}
+.naive .pbar i{background:#9AA9AF}.adj .pbar i{background:var(--teal)}.pbar b{font-size:30px;text-align:right;color:var(--ink)}
+.verdict{font-size:26px;font-weight:700;margin:20px 0 0;padding:12px 18px;border-radius:12px}.verdict.bad{background:#FBE6E2;color:#9E2F1E}.verdict.good{background:#DFF3EA;color:#1F7350}
+.par-mid{text-align:center}.par-mid .arrow{font-size:90px;color:var(--amber);font-weight:800;line-height:1}.par-mid p{font-size:24px;margin:6px 0;color:var(--ink)}
+.par-find{margin-top:40px;font-size:25px;line-height:1.45;background:#fff;border-left:8px solid var(--teal);border-radius:12px;padding:22px 28px}
+.moves{display:flex;flex-direction:column;gap:14px;margin:20px 0}.mv{display:flex;flex-wrap:wrap;gap:8px}.mv span{font-size:19px;padding:6px 12px;border-radius:10px;font-weight:600}
+.mv.neg span{background:#F4EFE7;color:#7A5410}.mv.pos span{background:#DFF3EA;color:#1F7350;font-size:22px}.mv em{font-style:normal;font-weight:800;margin-left:10px}
+.demo .big-num{color:var(--primary);font-size:84px}
+.flow{display:grid;grid-template-columns:1fr 60px 1fr 60px 1fr 60px 1fr;align-items:stretch}.fl{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px}.fl span{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--primary);color:#fff;font-weight:800;font-size:24px;margin-bottom:16px}.fl h3{font-size:30px;margin-bottom:10px}.fl{min-height:330px}.fl p{font-size:22px;line-height:1.45;margin:0}
+.fa{display:grid;place-items:center;font-size:48px;color:var(--amber);font-weight:800}
+.csv{margin-top:40px}.csv p{font-size:20px;color:var(--muted);margin:0 0 8px}.csv code{display:block;font:22px ui-monospace,Menlo,monospace;background:#0F3A44;color:#D9F0EE;padding:20px 24px;border-radius:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tech{display:flex;gap:16px;flex-wrap:wrap;margin-top:auto}.tech span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:12px 24px;font-size:21px;font-weight:600;color:var(--primary)}
+.road{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}.rs{background:#fff;border:1px solid var(--line);border-radius:20px;padding:30px;border-top:6px solid var(--teal)}.rs span{font-size:20px;font-weight:700;color:var(--amber)}.rs h3{font-size:30px;margin:8px 0 12px}.rs p{font-size:21px;line-height:1.45;margin:0}
+.pay{color:var(--primary)!important;font-weight:600;border-top:1px dashed var(--line);padding-top:14px}
+.cta{flex-direction:row!important;gap:70px;align-items:center;background:linear-gradient(120deg,#fff,#E3F2F1)}.cta-left{flex:1}.cta h1{font-size:60px;line-height:1.1;font-weight:800;margin-bottom:16px}
+.cta dl{display:grid;grid-template-columns:200px 1fr;gap:14px 20px;font-size:26px;margin:40px 0}.cta dt{color:var(--muted)}.cta dd{margin:0;color:var(--ink);font-weight:600;word-break:break-all}
+.qr{width:480px;text-align:center;background:#fff;border-radius:26px;padding:34px;box-shadow:0 30px 80px rgba(11,85,99,.2)}.qr svg{width:100%;height:auto}.qr p{font-size:22px;color:var(--muted);margin:12px 0 0}
+.hint{position:fixed;right:16px;bottom:12px;color:#9FC3CA;font:13px Inter,sans-serif}
+@media print{@page{size:1920px 1080px;margin:0}html,body{background:var(--bg)}.deck{position:static;transform:none!important;width:auto;height:auto}.slide{display:flex!important;position:relative;break-after:page;page-break-after:always}.hint{display:none}}</style></head><body>
+<div class="deck" id="deck"><section class="slide title"><div class="t-left">
+  <div class="logo"><svg width="64" height="64" viewBox="0 0 32 32"><circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2.6"/><rect x="8.5" y="14" width="3" height="5" rx="1" fill="#E39B2D"/><rect x="12.5" y="10" width="3" height="9" rx="1" fill="currentColor"/><rect x="16.5" y="12" width="3" height="7" rx="1" fill="currentColor" opacity=".6"/><path d="M22.5 22.5 29 29" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>BilimLens</span></div>
+  <h1>Решения об учебниках и учебных часах — по измеримым результатам учеников</h1>
+  <p class="kz big">Оқулықтар мен оқу сағаттары туралы шешімдер — оқушылардың өлшенетін нәтижелері бойынша</p>
+  <p class="case">Кейс 1 · Data-Driven Curriculum · интеллектуальная система оценки эффективности учебников и учебных программ</p>
+  <div class="team"><span>Команда:</span> Кылышбай Фархат</div>
+</div><div class="t-right"><img src="img/home.png" alt=""></div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">02</span><div><h2>Проблема: решения принимаются «по традиции»</h2><p class="kz">Мәселе: шешімдер «дәстүр бойынша» қабылданады</p></div></header>
+<div class="cols3">
+  <div class="pc"><div class="pi">А·Б·В</div><h3>Выбор учебника</h3><p>По привычке, мнению коллег или презентации издательства. Связь с результатами учеников не проверяется.</p></div>
+  <div class="pc"><div class="pi">102 ч</div><h3>Распределение часов</h3><p>КТП переносится «как в прошлом году», даже если тема годами не усваивается, а на освоенные темы уходят лишние часы.</p></div>
+  <div class="pc"><div class="pi">≠</div><h3>Сравнение «в лоб»</h3><p>Средние баллы сравнивают напрямую и не учитывают, что в разные школы приходят дети с разным входным уровнем.</p></div>
+</div>
+<div class="quote">Результаты СОР, СОЧ и пробных тестов уже собираются — но превращаются в отчёт «для галочки», а не в решение.</div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">03</span><div><h2>Пользователь: методист и завуч</h2><p class="kz">Пайдаланушы: әдіскер және оқу ісінің меңгерушісі</p></div></header>
+<div class="cols2">
+  <div class="card"><h3>Кто</h3><ul><li><b>Методист</b> районного или областного отдела образования: отвечает за предмет в 20–100 школах.</li><li><b>Завуч</b> школы: утверждает КТП и распределение часов.</li></ul>
+  <h3>Боль</h3><ul><li>Данные есть, но в разрозненных таблицах Excel.</li><li>Нет инструмента, который отделит «плохой учебник» от «слабого набора учеников».</li><li>Любое решение приходится защищать перед руководством без цифр.</li></ul></div>
+  <div class="card"><h3>Сценарий с BilimLens</h3><ol class="tl">
+    <li><b>После СОЧ</b> — выгружает результаты в CSV/Excel и загружает в BilimLens (5 минут).</li>
+    <li><b>Видит</b> карту «школа × тема» и 2–3 критические темы района.</li>
+    <li><b>Проверяет</b>, какой учебник реально сильнее на этих темах при равном входном уровне.</li>
+    <li><b>Получает</b> план перераспределения часов и печатный отчёт для методобъединения.</li></ol></div>
+</div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">04</span><div><h2>Решение: BilimLens</h2><p class="kz">Шешім: BilimLens</p></div></header>
+<p class="lead">Веб-платформа, которая превращает результаты тестирования по темам в обоснованные решения об учебниках и учебных часах — с прозрачной статистикой и на двух языках.</p>
+<div class="cols4">
+  <div class="fc"><span>01</span><h3>Анализ по темам</h3><p>Средний балл, медиана, разброс, доля усвоивших, прирост от входного теста.</p></div>
+  <div class="fc"><span>02</span><h3>Сложные разделы</h3><p>Автоклассификация «критическая / риск / норма / освоена» и анализ заданий.</p></div>
+  <div class="fc"><span>03</span><h3>Сравнение учебников</h3><p>С поправкой на входной уровень, 95% CI, Cohen’s d, защита от малых выборок.</p></div>
+  <div class="fc"><span>04</span><h3>Рекомендации по часам</h3><p>Перераспределение при фиксированных 102 ч, объяснение и симулятор «что если».</p></div>
+</div>
+<p class="note">Только анализ: тесты проводятся как обычно, в систему загружаются результаты (CSV/Excel). Интерфейс RU/KZ, работает в браузере без установки.</p><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide demo"><header class="sh"><span class="sn">05</span><div><h2>Демо: какие темы не усваиваются</h2><p class="kz">Демо: қай тақырыптар меңгерілмейді</p></div></header>
+<div class="demo-grid"><div class="shot"><img src="img/topics-table.png" alt=""></div>
+<div class="side">
+  <div class="big-num">30%</div><p>учеников усвоили тему <b>«Алгебраические дроби»</b> — критическая тема (порог 60 баллов).</p>
+  <ul><li>«Разложение многочлена на множители» — 44%, критическая</li><li>«Системы линейных уравнений» — 57%, зона риска</li></ul>
+  <div class="callout">Анализ заданий: в задании <b>T08-Q07</b> сильные ученики ошибаются чаще слабых (r = −0,36) — вероятная ошибка в ключе.</div>
+  <p class="rule">Правило: критическая — усвоение &lt; 50% и средний балл ниже медианы по темам.</p>
+</div></div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide paradox"><header class="sh"><span class="sn">06</span><div><h2>Главное: наивное сравнение учебников ошибается</h2><p class="kz">Басты нәтиже: оқулықтарды тікелей салыстыру қате</p></div></header>
+<div class="par-grid">
+  <div class="par-col naive"><p class="lbl">«В лоб» — средний итоговый балл</p>
+    <div class="pbar"><span>Учебник А</span><div><i style="width:81.36312849162027%"></i></div><b>75,3</b></div><div class="pbar"><span>Учебник Б</span><div><i style="width:63.16955017301024%"></i></div><b>70,8</b></div><div class="pbar"><span>Учебник В</span><div><i style="width:41.730243612596496%"></i></div><b>65,4</b></div>
+    <p class="verdict bad">Лидер: Учебник А</p></div>
+  <div class="par-mid"><div class="arrow">→</div><p>учитываем<br>входной тест</p><p class="small">входной балл школ<br>с учебником А: <b>54,2</b><br>у остальных: <b>42,4</b></p></div>
+  <div class="par-col adj"><p class="lbl">С поправкой на входной уровень</p>
+    <div class="pbar"><span>Учебник А</span><div><i style="width:61.14290017085932%"></i></div><b>70,3</b></div><div class="pbar"><span>Учебник Б</span><div><i style="width:75.23673923088222%"></i></div><b>73,8</b></div><div class="pbar"><span>Учебник В</span><div><i style="width:53.98979949857028%"></i></div><b>68,5</b></div>
+    <p class="verdict good">Лидер: Учебник Б (+3,5 балла к А, 95% CI [2,8; 4,2])</p></div>
+</div>
+<div class="par-find"><b>Вывод системы:</b> Учебник Б эффективнее на темах «Функции и их графики» (+11,4 балла, d = 0,77), «Линейная функция» (+9,8 балла, d = 0,70); Учебник В слабее на теме «Алгебраические дроби» (−11,3, d = −0,64). По теме «Элементы статистики» для учебника В (n = 17) система честно пишет «недостаточно данных».</div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide demo"><header class="sh"><span class="sn">07</span><div><h2>Демо: рекомендации по часам</h2><p class="kz">Демо: сағаттар бойынша ұсыныстар</p></div></header>
+<div class="demo-grid"><div class="shot"><img src="img/hours-table.png" alt=""></div>
+<div class="side">
+  <div class="big-num">102 → 102 ч</div><p>годовой объём не меняется; перераспределяется <b>14 ч</b></p>
+  <div class="moves"><div class="mv neg"><span>-2 ч · Линейные уравнения с одной переменной</span><span>-1 ч · Степень с натуральным показателем</span><span>-1 ч · Одночлены</span><span>-2 ч · Многочлены: сложение и вычитание</span><span>-2 ч · Умножение многочленов</span><span>-2 ч · Формулы сокращённого умножения</span><span>-2 ч · Линейная функция</span><span>-2 ч · Элементы статистики</span></div>
+  <div class="mv pos"><span>+7 ч · Разложение многочлена на множители<em>44% → 64%</em></span><span>+4 ч · Системы линейных уравнений<em>57% → 68%</em></span><span>+3 ч · Алгебраические дроби<em>30% → 39%</em></span></div></div>
+  <p class="small">Эффект часа оценён по школам, которые сами отклонялись от плана; освоенные темы не опускаются ниже 70% плана и наблюдаемого минимума. Это оценка, а не гарантия — проверяется в пилоте.</p>
+</div></div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">08</span><div><h2>Как это работает</h2><p class="kz">Қалай жұмыс істейді</p></div></header>
+<div class="flow">
+  <div class="fl"><span>1</span><h3>Данные</h3><p>CSV/Excel: школа, учебник, ученик (обезличенный код), тема, часы план/факт, входной и итоговый балл. Опционально — ответы по заданиям 0/1.</p></div>
+  <div class="fa">→</div>
+  <div class="fl"><span>2</span><h3>Метрики</h3><p>Усвоение (доля ≥ порога), медиана, разброс, прирост; индекс трудности p и дискриминативность r заданий.</p></div>
+  <div class="fa">→</div>
+  <div class="fl"><span>3</span><h3>Статистика</h3><p>Регрессия итоговый ~ входной + учебник; 95% CI, Cohen’s d; оценка «балл за час» по отклонениям от плана.</p></div>
+  <div class="fa">→</div>
+  <div class="fl"><span>4</span><h3>Решения</h3><p>Классификация тем, вывод по учебникам словами, план часов с обоснованием, PDF-отчёт.</p></div>
+</div>
+<div class="csv"><p>Пример строки входного файла</p><code>Алгебра, 7 класс, S07, Школа №5, Жуалынский район, S07-7А, Учебник Б, S07-7А-12, T08, Алгебраические дроби, 10, 12, 44, 58</code></div>
+<div class="tech"><span>Статический сайт: HTML + JS, без сервера</span><span>Расчёты в браузере — данные не покидают компьютер</span><span>17 unit-тестов аналитики + E2E-тест</span><span>RU / KZ</span></div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">09</span><div><h2>Почему этим выводам можно доверять</h2><p class="kz">Неліктен бұл қорытындыларға сенуге болады</p></div></header>
+<div class="cols2x2">
+  <div class="card"><h3>Поправка на входной уровень</h3><p>Сравниваем учеников с одинаковым входным баллом, а не «сильные школы против слабых». Именно это разворачивает вывод: А «в лоб» → Б с поправкой.</p></div>
+  <div class="card"><h3>Интервалы и размер эффекта</h3><p>Каждая разница — с 95% доверительным интервалом и Cohen’s d. Вывод «лучше» — только если интервал не включает 0 и d ≥ 0,2.</p></div>
+  <div class="card"><h3>Честное «не знаю»</h3><p>При n &lt; 30 или слишком широком интервале система пишет «недостаточно данных», а часы не экстраполирует за пределы того, что реально наблюдалось.</p></div>
+  <div class="card"><h3>Прозрачные формулы</h3><p>Правила и формулы открыты в блоках «Как это посчитано». Код аналитики покрыт тестами; демо-данные синтетические, генератор детерминированный.</p></div>
+</div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">10</span><div><h2>Внедрение: пилот в Жамбылской области</h2><p class="kz">Енгізу: Жамбыл облысындағы пилот</p></div></header>
+<div class="road">
+  <div class="rs"><span>Месяц 1</span><h3>Старт</h3><p>Алгебра 7 класса, 2–3 района, 15–20 школ. Шаблон выгрузки результатов СОР/СОЧ и пробных тестов из электронного журнала или Excel.</p></div>
+  <div class="rs"><span>Месяц 2</span><h3>Анализ</h3><p>Отчёт по району: критические темы, сравнение учебников, проект перераспределения часов. Обсуждение на методобъединении.</p></div>
+  <div class="rs"><span>Месяцы 3–5</span><h3>Проверка</h3><p>Часть школ корректирует КТП по рекомендации, часть работает по плану. Сравнение по итогам четверти.</p></div>
+  <div class="rs"><span>Далее</span><h3>Масштаб</h3><p>Все районы области, физика/химия/казахский язык; затем другие регионы. Данные — только обезличенные коды учеников.</p></div>
+</div>
+<p class="note">Нужно от управления образования: доступ к выгрузке результатов, 1 ответственный методист на район, согласование формата данных.</p><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">11</span><div><h2>Модель ценности</h2><p class="kz">Құндылық моделі</p></div></header>
+<div class="cols3">
+  <div class="card"><h3>Управления образования</h3><p>Закупка учебников и распределение часов на основании результатов; единый отчёт по области вместо ручных таблиц.</p><p class="pay">Модель: годовая лицензия на регион / госзаказ.</p></div>
+  <div class="card"><h3>Школы и методисты</h3><p>Готовый анализ после каждого СОЧ, план КТП с обоснованием, проверка качества заданий.</p><p class="pay">Бесплатно для школ в рамках региональной лицензии.</p></div>
+  <div class="card"><h3>Издательства и авторы</h3><p>Обратная связь: на каких темах учебник проигрывает, какие разделы переписать.</p><p class="pay">Платная агрегированная аналитика без доступа к данным учеников.</p></div>
+</div>
+<p class="note">Альтернатива финансирования на старте: грант / акселератор EdTech, пилот за счёт регионального бюджета на цифровизацию.</p><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide "><header class="sh"><span class="sn">12</span><div><h2>Дорожная карта</h2><p class="kz">Даму жоспары</p></div></header>
+<div class="road">
+  <div class="rs"><span>Сейчас · MVP</span><h3>Готово</h3><p>4 модуля анализа, импорт CSV/Excel с валидацией, RU/KZ, отчёт PDF, карточка школы, симулятор часов.</p></div>
+  <div class="rs"><span>+3 месяца</span><h3>Интеграции</h3><p>Импорт из электронных журналов, личные кабинеты отделов образования, история по годам.</p></div>
+  <div class="rs"><span>+6 месяцев</span><h3>Глубже</h3><p>Многоуровневые модели (ученик–класс–школа), банк заданий с анализом по заданиям, больше предметов.</p></div>
+  <div class="rs"><span>+12 месяцев</span><h3>Масштаб</h3><p>Все регионы, рекомендации по методике для каждой критической темы, открытые обезличенные датасеты.</p></div>
+</div>
+<p class="note">Принцип развития: каждая новая рекомендация сначала проверяется на пилотных школах и сравнивается с контрольной группой.</p><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section>
+<section class="slide cta"><div class="cta-left">
+  <div class="logo"><svg width="54" height="54" viewBox="0 0 32 32"><circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2.6"/><rect x="8.5" y="14" width="3" height="5" rx="1" fill="#E39B2D"/><rect x="12.5" y="10" width="3" height="9" rx="1" fill="currentColor"/><rect x="16.5" y="12" width="3" height="7" rx="1" fill="currentColor" opacity=".6"/><path d="M22.5 22.5 29 29" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><span>BilimLens</span></div>
+  <h1>Откройте демо — все цифры этой презентации посчитаны в нём</h1>
+  <p class="kz big">Демоны ашыңыз — бұл таныстырылымдағы барлық сандар сонда есептелген</p>
+  <dl><dt>MVP</dt><dd>https://kylyshbay.github.io/bilimlens/</dd><dt>Репозиторий</dt><dd>https://github.com/Kylyshbay/bilimlens</dd><dt>Команда</dt><dd>Кылышбай Фархат · github.com/Kylyshbay</dd></dl>
+  <p class="small">Демо-данные синтетические (953 учеников, 16 школ, алгебра 7 класс), сгенерированы для демонстрации; на реальных данных система работает так же.</p>
+</div><div class="qr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 31" shape-rendering="crispEdges"><path fill="#FFFFFF" d="M0 0h31v31H0z"/><path stroke="#0B3F4A" d="M1 1.5h7m4 0h2m2 0h1m3 0h1m2 0h7M1 2.5h1m5 0h1m5 0h2m1 0h4m3 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m2 0h3m2 0h2m1 0h1m4 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m5 0h1m5 0h1m3 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m3 0h3m1 0h3m1 0h1m3 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h1m2 0h2m2 0h3m1 0h2m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M10 8.5h1m1 0h2m1 0h2m1 0h1m2 0h1M1 9.5h1m2 0h1m1 0h2m1 0h2m2 0h1m3 0h1m1 0h1m1 0h2m1 0h1M1 10.5h1m1 0h2m5 0h2m1 0h1m3 0h1m3 0h1m1 0h1m2 0h1m2 0h1M2 11.5h1m1 0h5m2 0h1m6 0h1m1 0h1m3 0h5M2 12.5h1m1 0h1m1 0h1m1 0h2m3 0h1m1 0h3m2 0h2m1 0h1m1 0h1m1 0h2M3 13.5h2m1 0h4m1 0h1m1 0h1m2 0h3m1 0h5m1 0h1m1 0h2M1 14.5h1m3 0h2m6 0h1m6 0h3M5 15.5h1m1 0h2m1 0h1m1 0h1m5 0h2m1 0h1m2 0h6M2 16.5h1m3 0h1m1 0h1m5 0h6m1 0h2m2 0h2m1 0h1M1 17.5h3m1 0h3m1 0h3m2 0h3m1 0h1m1 0h3m5 0h1M2 18.5h1m1 0h2m3 0h1m2 0h1m4 0h2m3 0h3m1 0h1m2 0h1M1 19.5h1m1 0h3m1 0h1m2 0h1m1 0h3m3 0h1m2 0h1m1 0h3m2 0h2M3 20.5h1m1 0h1m2 0h2m1 0h2m1 0h1m1 0h7m1 0h2m2 0h2M1 21.5h1m1 0h1m2 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h7m1 0h1M9 22.5h1m1 0h4m2 0h1m2 0h2m3 0h1m1 0h3M1 23.5h7m3 0h1m2 0h2m2 0h1m2 0h1m1 0h1m1 0h1m2 0h1M1 24.5h1m5 0h1m1 0h1m2 0h1m1 0h1m1 0h2m1 0h3m3 0h5M1 25.5h1m1 0h3m1 0h1m2 0h1m4 0h4m2 0h5m2 0h2M1 26.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h3m2 0h1m1 0h1m2 0h1m1 0h4M1 27.5h1m1 0h3m1 0h1m2 0h1m2 0h2m4 0h1m1 0h1m3 0h3m1 0h1M1 28.5h1m5 0h1m2 0h3m3 0h1m1 0h1m2 0h2m2 0h1m2 0h1M1 29.5h7m1 0h2m2 0h2m1 0h1m1 0h1m2 0h2m3 0h1m1 0h1"/></svg>
+<p>Сканируйте, чтобы открыть MVP</p></div><footer class="sf"><span><b>BilimLens</b> · EdTech Hackathon by Zhambyl Hub · кейс 1</span><span class="pg"></span></footer></section></div>
+<div class="hint">← → / пробел · F — полный экран</div>
+<script>
+const sl=[...document.querySelectorAll('.slide')];sl.forEach((s,i)=>s.querySelector('.pg').textContent=(i+1)+' / '+sl.length);
+let i=Math.max(0,Math.min(sl.length-1,(parseInt(location.hash.slice(1))||1)-1));
+function show(){sl.forEach((s,k)=>s.classList.toggle('active',k===i));history.replaceState(null,'','#'+(i+1));}
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);document.getElementById('deck').style.transform='translate(-50%,-50%) scale('+k+')';}
+addEventListener('resize',fit);fit();show();
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){i=Math.min(sl.length-1,i+1);show();}else if(['ArrowLeft','PageUp'].includes(e.key)){i=Math.max(0,i-1);show();}else if(e.key==='f'||e.key==='F'){document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen().catch(()=>{});}});
+addEventListener('click',e=>{i=e.clientX>innerWidth/2?Math.min(sl.length-1,i+1):Math.max(0,i-1);show();});
+</script></body></html>
